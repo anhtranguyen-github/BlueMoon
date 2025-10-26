@@ -1,9 +1,7 @@
 #!/bin/bash
 
-# Base project directory
 BASE_DIR="BlueMoon"
 
-# List of all directories from the table
 DIRS=(
     "01_Concept/Working"
     "01_Concept/Review"
@@ -34,10 +32,10 @@ DIRS=(
     "07_Operations/Release"
 )
 
-# Create all directories
-echo "Creating project directory structure..."
+echo "Creating folder structure with .gitkeep files..."
 for dir in "${DIRS[@]}"; do
     mkdir -p "$BASE_DIR/$dir"
+    touch "$BASE_DIR/$dir/.gitkeep"
 done
 
-echo "✅ All folders created under $BASE_DIR/"
+echo "✅ All folders created and tracked by Git."
